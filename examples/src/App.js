@@ -11,10 +11,8 @@ let state = {
 let machine =
   '\n// Available variables:\n// Machine (machine factory function)\n// XState (all XState exports)\n\nconst lightMachine = Machine({\n  id: "light",\n  initial: "green",\n  states: {\n    green: {\n      on: { TIMER: "yellow" }\n    },\n    yellow: {\n      on: { TIMER: "red" }\n    },\n    red: {\n      on: { TIMER: "green" }\n    }\n  }\n});\n';
 
-class App extends React.Component {
-  render() {
-    return <StateChart machine={machine} />;
-  }
+function App() {
+  return <StateChart machine={machine} />;
 }
 
 export default App;

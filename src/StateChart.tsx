@@ -270,7 +270,7 @@ export class StateChart extends React.Component<
     return (
       <StyledStateChart
         style={{
-          height: this.props.height || "100%",
+          height: this.props.height || "100vh",
           // @ts-ignore
           "--color-border": "#dedede",
           "--color-primary": "rgba(87, 176, 234, 1)",
